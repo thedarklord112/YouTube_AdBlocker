@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube AdBlocker Ultra",
+  "version": "1.0",
+  "description": "Automatically skips and removes annoying video ads and banners on YouTube.",
+  "permissions": [
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*://*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*://*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
